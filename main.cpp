@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+
 using std::cout;
 using std::cin;
 using std::string;
@@ -37,9 +38,8 @@ int main()
             cout << "Neįvedėte taisyklingo vardo." << endl << endl;
             continue;
         }
-        else {
-            break;
-        }
+
+        break;
 
     } while (true);
 
@@ -61,18 +61,31 @@ int main()
     }
 
 
-    string border3 = "* " + greeting + " *";
+    for (int i {}; i < 5; i++) {
 
-    string border1(border3.size(), '*');
-    string border5(border1);
+        cout << "*";
 
-    string temp(greeting.size() + 2, ' ');
-    string border2 = "*" + temp + "*";
-    string border4(border2);
+        if (i == 0 || i == 4) {
+            for (int i{}; i < greeting.size() + 2; i++)
+                cout << "*";
 
-    cout << endl << endl;
-    cout << border1 << endl << border2 << endl << border3 << endl
-        << border4 << endl << border5 << endl;
+            cout << "*" << endl;
+            continue;
+        }
+
+        if (i == 1 || i == 3) {
+            for (int i{}; i < greeting.size() + 2; i++)
+                cout << " ";
+
+            cout << "*" << endl;
+            continue;
+        } 
+
+
+        if (i == 2) {
+            cout << " " + greeting << " *" << endl;
+        }
+    }
 
     return 0;
 }
