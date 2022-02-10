@@ -1,4 +1,4 @@
-# Versija 0.1
+# Versija 0.2
 
 Programa paprašo į vesti vardą ir atitinkamai pagal vardą suformuoja pasisveikinimo žinutę ir ją išspausdina rėmuose
 
@@ -8,3 +8,13 @@ Programa paprašo į vesti vardą ir atitinkamai pagal vardą suformuoja pasisve
  - `cd oop-test`
  - `g++ main.cpp -o main`
  - `./main`
+
+## Changelog
+
+---
+
+## [v0.1](https://github.com/dominykasmk/oop-test/tree/v0.1) (2022-02-10)
+- implementuota naudojant skirtingus kintamuosius skirtingoms rėmelio eilutėms
+## [v0.2](https://github.com/dominykasmk/oop-test/tree/v0.2) (2022-02-10)
+- minimalus refactoringas
+- kiekvienai skirtingai rėmelio eilutei skirtas kintamasis pakeistas į ciklą
