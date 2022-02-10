@@ -12,7 +12,6 @@ int main()
     cout << "Įveskite savo vardą" << endl;
 
     string first_name;
-    string last_name;
 
     // Patikrina ar ivestas stringas nera tuscias
     do {
@@ -22,17 +21,11 @@ int main()
        
         if (first_name.empty()) {
             cout << "Nieko neįvedėte." << endl << endl;
-        }
-        else {
-            break;
+            continue;
         }
 
-    } while (true);
 
-
-    // Patikrina ar ivestas stringas yra normalus zodis
-    do {
-
+        // Patikrina ar ivestas stringas yra normalus zodis
         bool valid_string = true;
         for (std::size_t i{}; i < first_name.length() && valid_string; i++) {
             if (!(std::isalpha(first_name[i]) || std::isspace(first_name[i]))) {
@@ -42,6 +35,7 @@ int main()
 
         if (!valid_string) {
             cout << "Neįvedėte taisyklingo vardo." << endl << endl;
+            continue;
         }
         else {
             break;
