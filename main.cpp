@@ -11,7 +11,6 @@ using std::endl;
 int main()
 {
     cout << "Įveskite savo vardą" << endl;
-
     string first_name;
 
     // Patikrina ar ivestas stringas nera tuscias
@@ -43,6 +42,22 @@ int main()
 
     } while (true);
 
+    
+    cout << endl << "Įveskite norimą rėmelio dydį (nuo 1 iki 10)" << endl;
+    cout << "> ";
+    int frame_size;
+
+    
+    while (!(cin >> frame_size) || (frame_size > 10 || frame_size < 1)) {
+        
+        cout << endl << "Įveskite skaičių nuo 1 iki 10" << endl;
+        cout << "> ";
+
+        cin.clear();
+        cin.ignore(22, '\n');
+    }
+    cout << endl;
+
 
     string greeting;
     first_name[0] = toupper(first_name[0]);
@@ -61,30 +76,26 @@ int main()
     }
 
 
-    for (int i {}; i < 5; i++) {
+    for (int i {}; i < frame_size * 2 + 3; i++) {
 
-        cout << "*";
-
-        if (i == 0 || i == 4) {
-            for (int i{}; i < greeting.size() + 2; i++)
+        if (i == 0 || i == frame_size * 2 + 2) {
+            for (int i{}; i < greeting.size() + 2 + frame_size * 2; i++)
                 cout << "*";
 
-            cout << "*" << endl;
+            cout << endl;
             continue;
         }
 
-        if (i == 1 || i == 3) {
-            for (int i{}; i < greeting.size() + 2; i++)
-                cout << " ";
 
-            cout << "*" << endl;
+        if (i == frame_size + 1) {
+            string white_spaces(frame_size, ' ');
+            cout << "*" << white_spaces << greeting << white_spaces << "*" << endl;
+
             continue;
-        } 
-
-
-        if (i == 2) {
-            cout << " " + greeting << " *" << endl;
         }
+
+        string white_spaces(greeting.size() + frame_size * 2, ' ');
+        cout << "*" << white_spaces << "*" << endl;
     }
 
     return 0;
