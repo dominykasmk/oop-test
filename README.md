@@ -18,3 +18,5 @@ Programa paprašo į vesti vardą ir atitinkamai pagal vardą suformuoja pasisve
 ## [v0.2](https://github.com/dominykasmk/oop-test/tree/v0.2) (2022-02-10)
 - minimalus refactoringas
 - kiekvienai skirtingai rėmelio eilutei skirtas kintamasis pakeistas į ciklą
+## [v1.0](https://github.com/dominykasmk/oop-test/tree/v1.0) (2022-02-11)
+- pridėta galimybė vartotojui pasirinkti rėmelio dydį
