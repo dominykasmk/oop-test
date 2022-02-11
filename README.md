@@ -1,6 +1,6 @@
-# Versija 0.2
+# Versija 1.0
 
-Programa paprašo į vesti vardą ir atitinkamai pagal vardą suformuoja pasisveikinimo žinutę ir ją išspausdina rėmuose
+Programa paprašo įvesti vardą ir rėmelio dydį, ir atitinkamai pagal tai suformuoja pasisveikinimo žinutę, ir ją išspausdina rėmuose
 
 ## Kaip parunnint
 
