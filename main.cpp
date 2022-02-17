@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 
 
 using std::cout;
@@ -7,6 +8,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+
+void ignoreLine();
+    
 
 int main()
 {
@@ -54,7 +58,7 @@ int main()
         cout << "> ";
 
         cin.clear();
-        cin.ignore(22, '\n');
+        ignoreLine();
     }
     cout << endl;
 
@@ -99,4 +103,9 @@ int main()
     }
 
     return 0;
+}
+
+void ignoreLine()
+{
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
