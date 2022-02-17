@@ -28,7 +28,7 @@ int main()
         // Patikrina ar ivestas stringas yra normalus zodis
         bool valid_string = true;
         for (std::size_t i{}; i < first_name.length() && valid_string; i++) {
-            if (!(std::isalpha(first_name[i]) || std::isspace(first_name[i]))) {
+            if (!(std::isalpha(first_name[i]) || !std::isspace(first_name[i]))) {
               valid_string = false; 
             }
         }
